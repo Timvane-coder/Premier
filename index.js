@@ -250,17 +250,12 @@ generateHighQualityLinkPreview: true,
 resolveMsgBuffer: true,
 });
   if (usePairingCode && !ptz.authState.creds.registered) {
-    const choice = await question('Pilih metode verifikasi:\n1. Via Nomor\nPilihan Anda: ');
 
-       if (choice === '1') {
       console.log(`Is connecting Number ${global.pairing}\n`)
       const code = await ptz.requestPairingCode(global.pairing)
       console.log('Process...');
       await sleep(3000); // Tunggu selama 4000 milidetik
       console.log(`Your Pairing Code: ${code}`);
-    } else {
-      console.log('Pilihan tidak valid.');
-    }
   }
 
 
