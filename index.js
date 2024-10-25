@@ -242,7 +242,7 @@ const { state, saveCreds } = await useMultiFileAuthState("session");
 const ptz = makeWASocket({
 isLatest: true,  // Set the correct value for isLatest
 keepAliveIntervalMs: 50000,
-printQRInTerminal: true,
+printQRInTerminal: !usePairingCode,
 logger: pino({ level: "silent" }),
 auth: state, // Ensure state is correctly initialized
 browser: ["Ubuntu", "Chrome", "20.0.04"],
