@@ -100,7 +100,7 @@ lolcatjs.fromString(`Folder '${folderName}' sudah ada.`);
 }
 createTmpFolder();
 
-const usePairingCode = true
+const usePairingCode = false
 const question = (text) => {
 const rl = readline.createInterface({
 input: process.stdin,
